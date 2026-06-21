@@ -1,0 +1,19 @@
+name: Notify site to rebuild
+
+# When notes change, tell nishokvg.github.io to rebuild so /notes stays in sync.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repository_dispatch to the site repo
+        run: |
+          curl -fsS -X POST \
+            -H "Authorization: token ${{ secrets.SITE_DISPATCH_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/nishokvg/nishokvg.github.io/dispatches \
+            -d '{"event_type":"notes-updated"}'

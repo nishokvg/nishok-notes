@@ -1,4 +1,9 @@
-# Linux / Bash Command Reference — Interview Prep
+---
+title: "Linux / Bash Command Reference"
+category: "Linux"
+tags: ["bash", "cli", "linux", "interview-prep"]
+excerpt: "A systematic Linux/Bash refresher organized by category, with the interview-prep angle built in."
+---
 
 A systematic refresher organized by category, with the "extra knowledge" angle interviewers look for built in. Each section moves from common → less common, mirroring how live coding rounds escalate.
 
